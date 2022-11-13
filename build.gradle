@@ -29,6 +29,7 @@ dependencies {
 	implementation 'org.springframework:spring-jdbc'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:r2dbc-postgresql'
+	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'

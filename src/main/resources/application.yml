@@ -1,16 +1,11 @@
 spring:
-#  jpa:
-#    database: POSTGRESQL
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: update
-
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/postgres
+    url: r2dbc:postgresql://localhost:5432/demo
     username: postgres
     password: postgres
-#  datasource:
-#    url: r2dbc:postgresql://localhost:5432/postgres
-#    username: postgres
-#    password: postgres
-#    driver-class-name: io.r2dbc.postgresql.api.RefCursor
+  liquibase:
+    url: jdbc:postgresql://localhost:5432/demo
+    user: postgres
+    password: postgres
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
