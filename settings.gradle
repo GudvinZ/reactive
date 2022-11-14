@@ -6,3 +6,6 @@ pluginManagement {
 	}
 }
 rootProject.name = 'reactive'
+include 'reactive-web'
+include 'reactive-db'
+
