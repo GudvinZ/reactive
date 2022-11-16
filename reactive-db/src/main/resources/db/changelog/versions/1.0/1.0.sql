@@ -1,6 +1,6 @@
-create table persons (
+create table person (
     id bigserial,
-    "name" text not null
+    firstName text not null
 );
 
 
