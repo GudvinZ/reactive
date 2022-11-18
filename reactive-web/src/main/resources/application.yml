@@ -3,9 +3,19 @@ spring:
     url: r2dbc:postgresql://localhost:5432/demo
     username: postgres
     password: postgres
+    pool:
+      initial-size: 3
+      max-size: 10
+      max-idle-time: 30m
+  jooq:
+    sql-dialect: postgres
   liquibase:
     url: jdbc:postgresql://localhost:5432/demo
     user: postgres
     password: postgres
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.xml
+logging:
+  level:
+    io.r2dbc.postgresql.QUERY: DEBUG # for queries
+    io.r2dbc.postgresql.PARAM: DEBUG # for parameters
